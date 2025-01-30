@@ -2,7 +2,13 @@ package com.example.springboot.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
 @Entity
+@Data
+@NoArgsConstructor
 public class CarModel {
     @Id
     private Long id;
@@ -20,27 +26,5 @@ public class CarModel {
         this.category = category;
     }
 
-    public String getManufacturer() {
-        return manufacturer;
-    }
 
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

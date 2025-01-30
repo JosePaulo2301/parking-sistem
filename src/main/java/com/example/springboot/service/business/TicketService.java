@@ -11,14 +11,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 
-@Entity
-public class Ticket {
+public class TicketService {
 
-	@OneToOne
-	@JoinColumn(name = "car_id_ticket")
-	private Car car;
-	@Id
-	private Long id;
+
 	private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private static final int TICKET_LENGH = 6;
 

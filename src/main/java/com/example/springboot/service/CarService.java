@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.springboot.Mapper.CarMapper;
 import com.example.springboot.exception.RecordNotFoundException;
 import com.example.springboot.model.Car;
-import com.example.springboot.repositories.CarRepository;
+import com.example.springboot.repository.CarRepository;
 import com.example.springboot.service.dto.CarDTO;
 import com.example.springboot.service.dto.CarRequestDTO;
 

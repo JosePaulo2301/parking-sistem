@@ -2,6 +2,7 @@ package com.example.springboot.controller;
 
 import java.util.List;
 
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springboot.Mapper.CarMapper;
-import com.example.springboot.repositories.CarRepository;
+import com.example.springboot.repository.CarRepository;
 import com.example.springboot.service.CarService;
 import com.example.springboot.service.dto.CarDTO;
 import com.example.springboot.service.dto.CarRequestDTO;
@@ -44,7 +45,7 @@ public class CarController {
 
 	@GetMapping("{id}")
 	@ResponseStatus(code = HttpStatus.OK)
-	public CarDTO findById (@PathVariable Long id) {
+	public CarDTO findById (@PathVariable @NotNull Long id) {
 		return carService.getById(id);
 	}
 
@@ -56,7 +57,7 @@ public class CarController {
 
     @PutMapping("/update/{id}")
 	@ResponseStatus(code = HttpStatus.OK)
-    public CarDTO updateCar(@PathVariable Long id, @RequestBody @Valid CarRequestDTO dto) {
+    public CarDTO updateCar(@PathVariable Long id, @RequestBody @Valid @NotNull  CarRequestDTO dto) {
     	return carService.updateCarService(id, dto);
     }
     

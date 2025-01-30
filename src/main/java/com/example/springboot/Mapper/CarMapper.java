@@ -27,7 +27,7 @@ public class CarMapper {
     public Car toModel (CarRequestDTO carDTO){
             Car car = new Car();
             car.setPlate(carDTO.getPlate());
-            car.setTicket(carDTO.getTicket().generateTicket());
+            car.setTicket(carDTO.getTicketService().generateTicket());
             car.setColor(carDTO.getColor());
             car.setManufacturer(carDTO.getManufacturer());
             car.setCategory(carDTO.getCategory());
