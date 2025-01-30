@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import org.springframework.data.annotation.CreatedDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -23,7 +24,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CarDTO {
-
+	
+		@JsonIgnoreProperties
         private Long id;
         private String ticket;
         private @NotBlank String plate;
