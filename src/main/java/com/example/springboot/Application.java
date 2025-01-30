@@ -15,7 +15,7 @@ version = "1.0",
 contact = @Contact(
         name = "José Paulo",
         email = "jose.dev2301@gmail.com",
-        url = "https://github.com/josepaulobrandao/parking-system"
+        url = "https://github.com/JosePaulo2301/parking-sistem"
 ),
 license = @License(
         name = "springdoc.org",
@@ -24,10 +24,10 @@ license = @License(
 ))
 
 @SpringBootApplication
-public class Startup {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Startup.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
