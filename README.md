@@ -8,7 +8,7 @@ Parking System é uma aplicação back-end em Java usando Spring Boot que tem po
 - Spring Boot ✅
 - Maven ✅
 - Banco de dados PostgreSQL e H2 ✅
-- Swagger UI ✅ [Acesse aqui](http://localhost:8080/swagger-ui/index.html#/)
+- Swagger UI ✅
 - Docker ✅
 
 ## Funcionalidades
