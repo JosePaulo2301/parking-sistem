@@ -42,7 +42,7 @@ mvn clean package -DskipTests
 
 ### 3. Executar a aplicação
 ```sh
-java -jar target/parking-system.jar
+java -jar target/Parking-System-0.0.1-SNAPSHOT.jar
 ```
 
 ## Como Rodar com Docker
