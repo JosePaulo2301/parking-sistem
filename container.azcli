@@ -1,0 +1,5 @@
+#login no azure
+az login
+
+#build da imagemlocamente
+bodkcer build -t 

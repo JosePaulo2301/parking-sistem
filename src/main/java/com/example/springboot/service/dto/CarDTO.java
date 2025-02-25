@@ -30,8 +30,8 @@ public class CarDTO {
         private String ticket;
         private @NotBlank String plate;
         private @NotBlank String color;
-        private String manufacturer;
-        private String category;
+        private @NotBlank String manufacturer;
+        private @NotBlank String category;
         @CreatedDate
         @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
         private LocalDateTime dataCriacao = LocalDateTime.now();
