@@ -11,7 +11,10 @@ import java.util.function.Function;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+/*
+ carregando a classe de exption usando reflection = <Class<? extends Exception>
 
+*/
     private final Map<Class<? extends Exception>, Function<Exception, ResponseEntity<ProblemDetail>>> exceptionHandlers = Map.of(
             ResourceNotFoundException.class,ex -> createResponse(ex, HttpStatus.NOT_FOUND),
             IllegalArgumentException.class, ex -> createResponse(ex, HttpStatus.BAD_REQUEST),

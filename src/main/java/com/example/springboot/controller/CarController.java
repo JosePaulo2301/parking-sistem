@@ -2,7 +2,6 @@ package com.example.springboot.controller;
 
 import java.util.List;
 
-import jakarta.validation.constraints.NotBlank;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.springboot.Mapper.CarMapper;
-import com.example.springboot.repository.CarRepository;
 import com.example.springboot.service.CarService;
 import com.example.springboot.service.dto.CarDTO;
 import com.example.springboot.service.dto.CarRequestDTO;
@@ -27,13 +24,10 @@ import jakarta.validation.constraints.NotNull;
 @RequestMapping("/api/v1/car")
 public class CarController {
 
-	private final CarRepository carRepository;
-	private final CarMapper carMapper;
+
 	private final CarService carService;
 
-	public CarController(CarRepository carRepository, CarMapper carMapper, CarService carService) {
-		this.carRepository = carRepository;
-		this.carMapper = carMapper;
+	public CarController(CarService carService) {
 		this.carService = carService;
 	}
 
