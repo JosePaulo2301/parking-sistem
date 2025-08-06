@@ -5,9 +5,12 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Entity;
+
 @Data
 @NoArgsConstructor
-public class vacancyMovement{
+@Entity
+public class VacancyMovement{
 	private LocalDateTime occupationDate;
 	private LocalDateTime occupationStartDdate;
 	private LocalDateTime occupationEndDate;
