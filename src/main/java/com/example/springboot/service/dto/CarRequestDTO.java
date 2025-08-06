@@ -3,7 +3,6 @@ package com.example.springboot.service.dto;
 
 import java.time.LocalDateTime;
 
-import com.example.springboot.service.TicketService;
 import org.springframework.data.annotation.CreatedDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -21,11 +20,10 @@ public class CarRequestDTO {
 
         @JsonIgnoreProperties
         private Long id;
-        private TicketService ticketService;
+        private Long carModelId;
         private @NotBlank String plate;
         private @NotBlank String color;
-        private String manufacturer;
-        private String category;
+
         @CreatedDate
         @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
         private LocalDateTime dataCriacao = LocalDateTime.now();

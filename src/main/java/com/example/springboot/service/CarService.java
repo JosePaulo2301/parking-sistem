@@ -30,7 +30,7 @@ public class CarService {
 	}
 
 	public CarDTO create (CarRequestDTO carDTO){
-		Car car = carMapper.toModel(carDTO);
+		Car car = carMapper.toModel(carDTO, new Car());
 		return carMapper.toDTO(carRepository.save(car));
 	}
 	public List<CarDTO> list() {
