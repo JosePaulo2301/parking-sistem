@@ -31,9 +31,15 @@ public class MapperTestes {
           */
 
         List<Pessoa> listaPessoas = new ArrayList<>();
+        List<Usuario> listaUsuario= new ArrayList<>();
+        listaUsuario.add(new Usuario("mauricio", "(11)4647779"));
+
         adicionarUsuario(listaPessoas);
+        adicionarUsuarioV2(listaPessoas);        
         
-        
+        // imprimirNomes(listaPessoas);
+        imprimirNomesUsuario(listaUsuario);
+
 
     }
 
@@ -42,7 +48,17 @@ public class MapperTestes {
         System.out.println("Tamanho da lista: " + lista.size());
     }
 
+    public static void adicionarUsuarioV2(List<? super Usuario> lista) {
+        Usuario user = new Usuario("JOSE.BRANDAO", "(11) 549971116");
+        System.out.println("Tamanho da lsita v2 : " + lista.size());
+    }
 
+    public static void imprimirNomesUsuario(List<? extends Usuario> listaUsuario) {
+        for (Usuario p : listaUsuario) {
+            System.out.println(p.getNome());
+            System.out.println(p.getNumerTelefone());
+        }
+    }
 
   
     }
@@ -96,10 +112,10 @@ public class MapperTestes {
              Assinatura: <V> Function<T, V> andThen(Function<? super R, ? extends V> after)
 
              Tradução:
-            <V> = Define o tipo de retorno final após a aplicação do andThen
-             T  = Tipo da entrada original da função atual
-             R  = Tipo de saída intermediária da função atual
-             ? super R = O argumento da função after pode ser do tipo R ou de qualquer superclasse de R
-             ? extends V = O retorno da função after será do tipo V
-                 */
+             <V> = Define o tipo de retorno final após a aplicação do andThen
+              T  = Tipo da entrada original da função atual
+              R  = Tipo de saída intermediária da função atual
+              ? super R = O argumento da função after pode ser do tipo R ou de qualquer superclasse de R
+              ? extends V = O retorno da função after será do tipo V
+        */
 

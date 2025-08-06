@@ -15,16 +15,5 @@ public class CarModel {
     private String manufacturer;
     private String category;
 
-    public CarModel(String manufacturer, String category, Car car) {
-        this.manufacturer = manufacturer;
-        this.category = category;
-    }
-
-    public CarModel(Long id, String manufacturer, String category) {
-        this.id = id;
-        this.manufacturer = manufacturer;
-        this.category = category;
-    }
-
 
 }

@@ -10,6 +10,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 @Data
@@ -20,10 +21,9 @@ public class Car {
 	private Long id;
 	private String plate;
 	private String color;
-	private String manufacturer;
-	private String category;
 	private String ticket;
-	
+	@ManyToOne
+	private CarModel carModel;
 	@CreatedDate
 	private LocalDateTime dataCriacao =  LocalDateTime.now();
 
