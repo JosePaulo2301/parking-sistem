@@ -34,13 +34,10 @@ public class CarService {
 	}
 
     public CarDTO create(CarRequestDTO carRequestDTO) {
-        CarModel carModel = carModelRepository.findById(carRequestDTO.getCarModelId())
-            .orElseThrow(() -> new RecordNotFoundException("CarModel not exist with id :" + carRequestDTO.getCarModelId()));
-		Car car = carMapper.toModel(carRequestDTO, carModel);
-        // Se precisar gerar ticket, faça aqui: car.setTicket(ticketService.generateTicket());
-        Car savedCar = carRepository.save(car);
-        return carMapper.toDTO(savedCar);
+        return null;
     }
+
+	
 	public List<CarDTO> list() {
 		return carRepository.findAll()
 				.stream()
